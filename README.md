@@ -16,10 +16,13 @@ docker run --rm jonlabelle/magika:latest
 docker run --rm jonlabelle/magika:latest --version
 
 # Scan a file from the current directory
-docker run --rm -v "$PWD:/workspace:ro" jonlabelle/magika:latest /workspace/README.md
+docker run --rm -v "$PWD:/workspace:ro" jonlabelle/magika:latest README.md
 
-# Scan all files in a directory
-docker run --rm -v "$PWD:/workspace:ro" jonlabelle/magika:latest /workspace
+# Scan files matching a shell glob (expanded by your shell)
+docker run --rm -v "$PWD:/workspace:ro" jonlabelle/magika:latest *.md
+
+# Recursively scan all files in the current directory tree
+docker run --rm -v "$PWD:/workspace:ro" jonlabelle/magika:latest --recursive .
 ```
 
 ## Image details
@@ -28,6 +31,7 @@ docker run --rm -v "$PWD:/workspace:ro" jonlabelle/magika:latest /workspace
 - Entrypoint: `magika-python-client` (via `entrypoint.sh`)
 - Default command: `--help`
 - Runtime user: non-root (`magika`)
+- Working directory: `/workspace` (so mounted files can be referenced relatively)
 - Magika package: latest from PyPI (`pip install magika`)
 - Architectures: `linux/amd64`, `linux/arm64`
 
@@ -42,7 +46,7 @@ docker run --rm -v "$PWD:/workspace:ro" jonlabelle/magika:latest /workspace
 make lint
 make build
 make run ARGS="--version"
-make run ARGS="/workspace/README.md"
+make run ARGS="README.md"
 ```
 
 If `docker` is unavailable, the `Makefile` also supports `podman` and `nerdctl`.
