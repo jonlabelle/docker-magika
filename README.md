@@ -1,7 +1,7 @@
 # Docker Magika
 
 [![cd](https://github.com/jonlabelle/docker-magika/actions/workflows/cd.yml/badge.svg)](https://github.com/jonlabelle/docker-magika/actions/workflows/cd.yml)
-[![docker pulls](https://img.shields.io/docker/pulls/jonlabelle/magika?label=docker%20pulls)](https://hub.docker.com/r/jonlabelle/magika)
+[![docker pulls](https://img.shields.io/docker/pulls/jonlabelle/magika)](https://hub.docker.com/r/jonlabelle/magika)
 [![image size](https://img.shields.io/docker/image-size/jonlabelle/magika/latest?label=image%20size)](https://hub.docker.com/r/jonlabelle/magika/tags)
 
 > Docker image for [Magika](https://securityresearch.google/magika/introduction/overview), a novel AI-powered file type detection tool that relies on the recent advance of deep learning to provide accurate detection.
