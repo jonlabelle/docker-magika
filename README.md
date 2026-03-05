@@ -28,7 +28,7 @@ docker run --rm -v "$PWD:/workspace:ro" jonlabelle/magika:latest --recursive .
 ## Image details
 
 - Base image: `python:slim`
-- Entrypoint: `magika-python-client` (via `entrypoint.sh`)
+- Entrypoint: `magika` (via `entrypoint.sh`)
 - Default command: `--help`
 - Runtime user: non-root (`magika`)
 - Working directory: `/workspace` (so mounted files can be referenced relatively)
