@@ -1,7 +1,15 @@
+*.log
+*.md
+.editorconfig
 .git
+.gitattributes
 .github
+.gitignore
+.markdownlint-cli2.jsonc
+.prettierignore
+.prettierrc
 .vscode
-scripts
-README.md
 LICENSE
 Makefile
+scripts
+tmp
