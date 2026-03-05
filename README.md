@@ -28,12 +28,13 @@ docker run --rm -v "$PWD:/workspace:ro" jonlabelle/magika:latest --recursive .
 ## Image details
 
 - Base image: `python:slim`
-- Entrypoint: `magika` (via `entrypoint.sh`)
+- Entrypoint: compatibility wrapper (via `entrypoint.sh`) that prefers `magika` and falls back to `magika-python-client` when needed
 - Default command: `--help`
 - Runtime user: non-root (`magika`)
 - Working directory: `/workspace` (so mounted files can be referenced relatively)
 - Magika package: latest from PyPI (`pip install magika`)
 - Architectures: `linux/amd64`, `linux/arm64`
+- Note: On platforms without Rust CLI wheels, the wrapper automatically uses `magika-python-client`
 
 ## Tags
 
