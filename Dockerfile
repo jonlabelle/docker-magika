@@ -25,6 +25,6 @@ COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 WORKDIR /workspace
-USER magika
+USER 10001:10001
 ENTRYPOINT ["entrypoint.sh"]
 CMD ["--help"]
