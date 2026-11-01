@@ -1,4 +1,4 @@
-FROM python:3.13-slim
+FROM python:3.15-slim
 
 LABEL org.opencontainers.image.authors="Jon LaBelle <https://jonlabelle.com>" \
   org.opencontainers.title="magika" \
